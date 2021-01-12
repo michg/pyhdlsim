@@ -19,7 +19,8 @@ def send_byte(sig, ticksperbit, val):
     for i in range(ticksperbit):
         yield
     for i in range(8):
-        sig.val =  (val  >> 1 ) & 1 
+        sig.val =  val & 1
+        val = val>>1
         for j in range(ticksperbit):
             yield
     sig.val = 1

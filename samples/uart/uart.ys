@@ -1,0 +1,1 @@
+ghdl  uart_rx.vhd uart_tx.vhd uart_top.vhd -e uart_top
