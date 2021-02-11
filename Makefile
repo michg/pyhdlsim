@@ -1,5 +1,5 @@
 SRC ?= adder
-YOSYSINC := $(shell python3 ypath.py)
+YOSYSINC := $(shell sh -c 'yosys-config --datdir')/include
 PYINC := $(shell sh -c 'python3 -m pybind11 --includes')
 PYLIB := $(shell sh -c 'python3-config --libs')
 SUF := $(shell sh -c 'python3-config --extension-suffix')
